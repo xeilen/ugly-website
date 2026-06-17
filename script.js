@@ -1,5 +1,5 @@
 /* ================================================================
-   DEVIS™ SCRIPT OF REGRET
+   DEVILS™ SCRIPT OF REGRET
    Maximum annoyance, minimum usability. As requested.
    ================================================================ */
 
@@ -19,7 +19,7 @@
     "★彡 BUY TRAFFIC NOW 彡★",
     ">>> CLICK HERE <<<",
     "!!! DON'T LEAVE !!!",
-    "💰 DEVIS 💰 ARBITRAGE 💰",
+    "💰 DEVILS 💰 ARBITRAGE 💰",
     "👀 WE SEE YOU 👀",
     "come back...",
   ];
@@ -55,7 +55,7 @@ function runAway(btn) {
 
 function fakeSubmit(e) {
   e.preventDefault();
-  alert("ERROR 0xDEVIS: form submitted to the void. Please try again 47 more times.");
+  alert("ERROR 0xDEVILS: form submitted to the void. Please try again 47 more times.");
   return false;
 }
 
@@ -147,7 +147,7 @@ function spamAlerts() {
 /* ---------- 9. FAKE "ARE YOU LEAVING?" GUILT TRIP ---------- */
 window.addEventListener("beforeunload", function (e) {
   e.preventDefault();
-  e.returnValue = "But we had something special... 💔 (DEVIS will miss your traffic)";
+  e.returnValue = "But we had something special... 💔 (DEVILS will miss your traffic)";
   return e.returnValue;
 });
 
@@ -169,7 +169,7 @@ window.addEventListener("wheel", function (e) {
   window.scrollBy(Math.sin(window.scrollY / 100) * 3, 0);
 }, { passive: true });
 
-console.log("%cDEVIS™", "font-size:40px;color:magenta;text-shadow:2px 2px lime;");
+console.log("%cDEVILS™", "font-size:40px;color:magenta;text-shadow:2px 2px lime;");
 console.log("%cstop looking at the console and BUY TRAFFIC", "font-size:18px;color:red;");
 
 /* ================================================================
@@ -179,7 +179,7 @@ console.log("%cstop looking at the console and BUY TRAFFIC", "font-size:18px;col
 /* ---------- 12. AUTOPLAYING SOUND ENGINE (Web Audio, no files) ----------
    Browsers block audio until the first user gesture, so we arm it and
    start the "banger" on the very first click / key / move. */
-var DEVIS_AUDIO = (function () {
+var DEVILS_AUDIO = (function () {
   var ctx = null, master = null, started = false, muted = false;
   var loopTimer = null, hornTimer = null;
   // a deeply cursed 8-bit "melody" (frequencies in Hz)
@@ -238,7 +238,7 @@ var DEVIS_AUDIO = (function () {
 
 ["click", "keydown", "mousemove", "touchstart"].forEach(function (evt) {
   window.addEventListener(evt, function armOnce() {
-    DEVIS_AUDIO.start();
+    DEVILS_AUDIO.start();
     ["click", "keydown", "mousemove", "touchstart"].forEach(function (e2) {
       window.removeEventListener(e2, armOnce);
     });
@@ -246,13 +246,13 @@ var DEVIS_AUDIO = (function () {
 });
 
 function toggleMute() {
-  var muted = DEVIS_AUDIO.toggleMute();
+  var muted = DEVILS_AUDIO.toggleMute();
   var btn = document.getElementById("muteBtn");
   if (muted) {
     btn.textContent = "🔇 fine. silence. (for now)";
     // mockingly un-mute itself after a few seconds
     setTimeout(function () {
-      DEVIS_AUDIO.toggleMute();
+      DEVILS_AUDIO.toggleMute();
       btn.textContent = "🔊 BANGER'S BACK BABY — you're welcome";
     }, 4000);
   } else {
@@ -265,7 +265,7 @@ var POPUP_COUNT = 0;
 var POPUP_MAX = 24; // mercy cap so the tab survives
 var POPUP_ADS = [
   { t: "★ CONGRATULATIONS ★", b: "You are the 1,000,000th visitor!<br>Claim your FREE iPod Shuffle!", c: "#00ff00" },
-  { t: "⚠ SYSTEM WARNING ⚠", b: "Your computer may be running slow.<br>Download DEVIS CleanerPro™ now!", c: "#ffff00" },
+  { t: "⚠ SYSTEM WARNING ⚠", b: "Your computer may be running slow.<br>Download DEVILS CleanerPro™ now!", c: "#ffff00" },
   { t: "💖 HOT CLICKS NEARBY 💖", b: "3 lonely ad impressions in YOUR area<br>want to connect right now!", c: "#ff69b4" },
   { t: "🤑 YOU WON $1,000,000 🤑", b: "(taxes, fees, and dignity not included)<br>Enter card to receive!", c: "#00ffff" },
   { t: "🦠 DEFINITELY NOT A VIRUS", b: "Click YES to not get a virus.<br>Click NO to also not get a virus.", c: "#ffa500" }
@@ -292,7 +292,7 @@ function spawnPopup() {
     spawnPopup();
   });
   p.querySelector("button").addEventListener("click", function () {
-    DEVIS_AUDIO.horn();
+    DEVILS_AUDIO.horn();
     spawnPopup();
   });
   makeDraggable(p, p.querySelector(".pop-title"));
@@ -369,7 +369,7 @@ setInterval(function () { if (POPUP_COUNT < 6) spawnPopup(); }, 12000);
     if (bubble) bubble.textContent = lines[i % lines.length];
   }, 4500);
   window.mascotTalk = function () {
-    DEVIS_AUDIO.horn();
+    DEVILS_AUDIO.horn();
     if (bubble) bubble.textContent = lines[Math.floor(Math.random() * lines.length)];
   };
 })();
@@ -403,19 +403,19 @@ setTimeout(showNewsletter, 6000);
 /* ---------- 19. MYSTERY-MEAT NAV (every icon does the wrong thing) ---------- */
 function mysteryNav(label) {
   alert("You clicked " + label + "... but it goes NOWHERE. Mystery navigation! 🎉");
-  DEVIS_AUDIO.horn();
+  DEVILS_AUDIO.horn();
   return false;
 }
 
 /* ---------- 20. RIGHT-CLICK & COPY HIJACK ---------- */
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
-  alert("NICE TRY 😈 Right-click is property of DEVIS™.");
+  alert("NICE TRY 😈 Right-click is property of DEVILS™.");
 });
 document.addEventListener("copy", function (e) {
   if (e.clipboardData) {
     var sel = (window.getSelection() || "").toString();
-    e.clipboardData.setData("text/plain", sel + "  — copyright DEVIS™, you thief 🏴‍☠️");
+    e.clipboardData.setData("text/plain", sel + "  — copyright DEVILS™, you thief 🏴‍☠️");
     e.preventDefault();
   }
 });
@@ -429,7 +429,10 @@ document.addEventListener("copy", function (e) {
     document.body.style.transition = "transform 0.05s";
     document.body.style.transform = "translate(" + (Math.random() * 8 - 4) + "px," + (Math.random() * 8 - 4) + "px)";
     setTimeout(function () {
-      document.body.style.transform = "translate(0,0)";
+      // clear the transform entirely (don't leave translate(0,0)) — any
+      // transform on <body> makes position:fixed children (the newsletter
+      // modal, etc.) resolve relative to the page instead of the viewport.
+      document.body.style.transform = "";
       shaking = false;
     }, 60);
   }, { passive: true });
