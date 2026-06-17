@@ -629,3 +629,109 @@ body {
 /* ---------- HIJACKED TEXT SELECTION ---------- */
 ::selection { background: #ff00ff; color: #00ff00; }
 ::-moz-selection { background: #ff00ff; color: #00ff00; }
+
+/* ================================================================
+   ===============  RESPONSIVE UGLINESS  ==========================
+   Still hideous, just hideous at every screen size. Nothing here
+   "fixes" the design — it only stops the awfulness from spilling
+   off-screen so phones/tablets can suffer too.
+   ================================================================ */
+
+/* keep the box model from blowing out widths on small screens */
+img, .stock-photo { max-width: 100%; height: auto; }
+input, textarea, select, button { max-width: 100%; }
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+  .mega-title { font-size: 72px; letter-spacing: 2px; }
+  .hero { padding: 60px 8px 40px; }
+  .big-num { font-size: 48px; }
+  .download-bar { width: 240px; font-size: 13px; }
+  .mystery-nav a { font-size: 24px; }
+  .mascot-body { font-size: 52px; }
+}
+
+/* ---------- PHONE (≤ 600px) ---------- */
+@media (max-width: 600px) {
+  /* headline that no longer escapes the viewport */
+  .mega-title {
+    font-size: 44px;
+    letter-spacing: 1px;
+    margin: 4px 0;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .logo-spin { font-size: 30px; }
+  .tilt { font-size: 18px; padding: 4px 8px; }
+  .hero { padding: 50px 6px 32px; border-width: 8px; }
+  .cta-jiggle { font-size: 20px; padding: 14px 16px; margin: 14px 6px; }
+  .under-construction { width: auto; }
+  .visitor-counter { font-size: 14px; }
+
+  /* marquees: smaller but still scrolling at you */
+  .marquee-top { font-size: 16px; }
+  .testi-marquee { font-size: 16px; }
+  .quote { margin: 0 8px; }
+
+  /* section headings shrink so they don't clip */
+  .wobble, .shake { font-size: 26px; }
+
+  /* sections: less padding, thinner gaudy borders */
+  .about, .services, .stats, .testimonials, .contact {
+    padding: 28px 10px;
+    border-width: 6px;
+  }
+  .justified-bad { word-spacing: 4px; letter-spacing: 0; }
+
+  /* cards stack and fill the width */
+  .card { width: 100%; max-width: 320px; transform: none; }
+  .card-1, .card-2, .card-3, .card-4 { transform: none; }
+
+  /* stats stack vertically */
+  .stat-row { flex-direction: column; gap: 18px; }
+  .big-num { font-size: 44px; }
+
+  /* contact form fits */
+  .contact-grid { gap: 18px; }
+  .bad-form { max-width: 100%; width: 100%; }
+  .contact-info { font-size: 16px; }
+
+  /* ---- floating chrome: shrink so it doesn't bury the page ---- */
+  .urgency-bar { font-size: 13px; padding: 3px; }
+  .cookie-doom { font-size: 14px; padding: 10px; }
+  .cookie-doom button { font-size: 13px; padding: 6px 8px; margin: 2px 3px; }
+
+  .chat-blob {
+    width: 54px; height: 54px;
+    font-size: 9px;
+    right: 6px; top: auto; bottom: 150px;
+  }
+
+  .mystery-nav { padding: 2px; }
+  .mystery-nav a { font-size: 20px; }
+
+  .mascot { bottom: 70px; left: 6px; }
+  .mascot-body { font-size: 40px; }
+  .mascot-bubble { max-width: 150px; font-size: 12px; padding: 6px 8px; }
+
+  .download-bar {
+    width: 92vw;
+    top: 70px;
+    font-size: 12px;
+    transform: translateX(-50%);
+  }
+
+  .mute-btn { top: auto; bottom: 130px; right: 6px; font-size: 11px; padding: 6px 8px; }
+
+  .newsletter-inner { max-width: 90vw; padding: 20px 16px; }
+  .fake-popup { width: 90vw; max-width: 260px; }
+
+  .footer { padding: 16px 8px 80px; }
+}
+
+/* ---------- TINY PHONE (≤ 380px) ---------- */
+@media (max-width: 380px) {
+  .mega-title { font-size: 34px; }
+  .cta-jiggle { font-size: 17px; }
+  .big-num { font-size: 36px; }
+}
